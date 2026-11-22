@@ -1,0 +1,22 @@
+node:
+  identifier: "Edge-Mining-CANFD-02"
+  site_identifier: "Edge-Mining-CANFD-02"
+  hardware: { type: "DEVICE_VIRTUAL_TPM", primary_backend: "NVIDIA_TENSORRT", xdp_driver_mode: "SKB" }
+nexus: { enabled: true, host: "10.240.70.10", port: 50051, nexus_http_port: 9443, active_model_name: "network_threat_int8.onnx", local_models_dir: "/etc/sentinel/models" }
+routes:
+  - sensor_id: Mining-Haul-CANFD-02
+    sensor_type: SOCKETCAN_J1939_CANFD
+    driver_mode: SOCKET_CAN
+    match:
+      port: 513
+      transport: can
+      package_id: org.aryorithm.package.canfd_actuator_guard
+      plugin_id: motion_guard_dissector_plugin.so
+      owner_subsystem: 18_cps_sec
+      execution_mode: CASCADE_SHORT_CIRCUIT
+      model_id: network_threat_int8.onnx
+      silicon_target: NVIDIA_TENSORRT
+      format: ONNX
+      precision: INT8
+      latency_budget_ns: 12000
+      threshold_drop: 0.85

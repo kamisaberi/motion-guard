@@ -1,0 +1,187 @@
+# File: /home/kami/motion-guard/scenarios/robotics_can_ethercat_grid/scenario.yaml
+
+version: "1.0"
+scenario:
+  name: "robotics_can_ethercat_grid"
+  description: "3-Bus Robotics & Motion Grid: AF_PACKET EtherCAT 0x88A4 + AF_UNIX CAN-FD + ipc:shareable POSIX ShmRing"
+
+networks:
+  motion-bus-net:
+    driver: bridge
+    subnet: "10.240.70.0/24"
+    gateway: "10.240.70.1"
+    internal: false
+
+volumes:
+  shared-models: { driver: local }
+  shared-datasets: { driver: local }
+  shared-logs: { driver: local }
+  shared-can-bus: { driver: local }
+
+services:
+  nexus:
+    build: { context: ., dockerfile: docker/Dockerfile.nexus }
+    container_name: matrix-nexus
+    hostname: nexus.matrix.internal
+    restart: unless-stopped
+    privileged: true
+    networks:
+      motion-bus-net: { ipv4_address: "10.240.70.10" }
+    ports: ["50051:50051", "9443:9443", "9444:9444"]
+    volumes:
+      - ./configs:/opt/sentinel-nexus/configs:ro
+      - ./models:/opt/sentinel-nexus/models
+      - ./pcaps:/opt/sentinel-nexus/pcaps:ro
+      - shared-datasets:/var/lib/sentinel-nexus/forge_datasets
+      - shared-logs:/var/log/sentinel-nexus
+      - ./shared/lib:/usr/local/lib/matrix-deps:ro
+      - ./shared/bin/sentinel-nexus:/usr/local/bin/sentinel-nexus:ro
+      - ./web:/opt/sentinel-nexus/web
+      - ../../web:/opt/sentinel-nexus/web/plugins:ro
+    environment:
+      - LD_LIBRARY_PATH=/usr/local/lib/matrix-deps
+      - NEXUS_ENV=simulation
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9443/api/v1/fleet/nodes"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+      start_period: 10s
+
+  edge-cobot-ethercat-01:
+    build: { context: ., dockerfile: docker/Dockerfile.sentinel }
+    container_name: matrix-edge-cobot-01
+    hostname: cobot-01.matrix.internal
+    restart: unless-stopped
+    privileged: true
+    cap_add: [NET_ADMIN, NET_RAW, SYS_ADMIN, BPF]
+    depends_on: { nexus: { condition: service_healthy } }
+    networks:
+      motion-bus-net: { ipv4_address: "10.240.70.101" }
+    volumes:
+      - ./configs/nodes/node_01_cobot_ethercat.yaml:/etc/sentinel/sentinel.yaml:ro
+      - ./configs:/etc/sentinel/configs:ro
+      - ./models:/etc/sentinel/models:rw
+      - shared-logs:/var/log/sentinel
+      - ./shared/lib:/usr/local/lib/matrix-deps:ro
+      - ./shared/bin/sentinel:/usr/local/bin/sentinel:ro
+      - /usr/local/lib/libmotion_guard.so:/usr/local/lib/libmotion_guard.so:ro
+      - /usr/local/lib/blackbox/motion_guard_dissector_plugin.so:/etc/sentinel/plugins.d/motion_guard_dissector_plugin.so:ro
+    environment:
+      - LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib/matrix-deps
+      - NODE_IDENTIFIER=Edge-Cobot-EtherCAT-01
+      - SITE_IDENTIFIER=Edge-Cobot-EtherCAT-01
+      - PRIMARY_BACKEND=INTEL_OPENVINO
+      - NEXUS_HOST=10.240.70.10
+      - NEXUS_PORT=50051
+
+  edge-mining-canfd-02:
+    build: { context: ., dockerfile: docker/Dockerfile.sentinel }
+    container_name: matrix-edge-mining-02
+    hostname: mining-02.matrix.internal
+    restart: unless-stopped
+    privileged: true
+    cap_add: [NET_ADMIN, NET_RAW, SYS_ADMIN, BPF]
+    depends_on: { nexus: { condition: service_healthy } }
+    networks:
+      motion-bus-net: { ipv4_address: "10.240.70.102" }
+    volumes:
+      - ./configs/nodes/node_02_mining_canfd.yaml:/etc/sentinel/sentinel.yaml:ro
+      - ./configs:/etc/sentinel/configs:ro
+      - ./models:/etc/sentinel/models:rw
+      - shared-logs:/var/log/sentinel
+      - shared-can-bus:/var/run/sentinel-bus
+      - ./shared/lib:/usr/local/lib/matrix-deps:ro
+      - ./shared/bin/sentinel:/usr/local/bin/sentinel:ro
+      - /usr/local/lib/libmotion_guard.so:/usr/local/lib/libmotion_guard.so:ro
+      - /usr/local/lib/blackbox/motion_guard_dissector_plugin.so:/etc/sentinel/plugins.d/motion_guard_dissector_plugin.so:ro
+    environment:
+      - LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib/matrix-deps
+      - NODE_IDENTIFIER=Edge-Mining-CANFD-02
+      - SITE_IDENTIFIER=Edge-Mining-CANFD-02
+      - SENTINEL_CAN_UNIX_SOCK=/var/run/sentinel-bus/can.sock
+      - PRIMARY_BACKEND=NVIDIA_TENSORRT
+      - NEXUS_HOST=10.240.70.10
+      - NEXUS_PORT=50051
+
+  edge-amr-shm-03:
+    build: { context: ., dockerfile: docker/Dockerfile.sentinel }
+    container_name: matrix-edge-amr-03
+    hostname: amr-03.matrix.internal
+    restart: unless-stopped
+    privileged: true
+    ipc: shareable
+    shm_size: "256mb"
+    cap_add: [NET_ADMIN, NET_RAW, SYS_ADMIN, BPF]
+    depends_on: { nexus: { condition: service_healthy } }
+    networks:
+      motion-bus-net: { ipv4_address: "10.240.70.103" }
+    volumes:
+      - ./configs/nodes/node_03_amr_shm.yaml:/etc/sentinel/sentinel.yaml:ro
+      - ./configs:/etc/sentinel/configs:ro
+      - ./models:/etc/sentinel/models:rw
+      - shared-logs:/var/log/sentinel
+      - ./shared/lib:/usr/local/lib/matrix-deps:ro
+      - ./shared/bin/sentinel:/usr/local/bin/sentinel:ro
+      - /usr/local/lib/libmotion_guard.so:/usr/local/lib/libmotion_guard.so:ro
+      - /usr/local/lib/blackbox/motion_guard_dissector_plugin.so:/etc/sentinel/plugins.d/motion_guard_dissector_plugin.so:ro
+    environment:
+      - LD_LIBRARY_PATH=/usr/local/lib:/usr/local/lib/matrix-deps
+      - NODE_IDENTIFIER=Edge-AMR-ShmRing-03
+      - SITE_IDENTIFIER=Edge-AMR-ShmRing-03
+      - SENTINEL_SHM_RING=/sentinel_motion_ring
+      - PRIMARY_BACKEND=ROCKCHIP_RKNN
+      - NEXUS_HOST=10.240.70.10
+      - NEXUS_PORT=50051
+
+  motion-wire-gen:
+    image: python:3.11-slim
+    container_name: matrix-motion-wire-gen
+    restart: unless-stopped
+    cap_add: [NET_RAW, NET_ADMIN]
+    ipc: "service:edge-amr-shm-03"
+    depends_on:
+      nexus: { condition: service_healthy }
+      edge-amr-shm-03: { condition: service_started }
+    networks:
+      motion-bus-net: { ipv4_address: "10.240.70.50" }
+    volumes:
+      - ./tools/motion_wire_gen.py:/app/motion_wire_gen.py:ro
+      - shared-can-bus:/var/run/sentinel-bus
+    command: ["python3", "-u", "/app/motion_wire_gen.py"]
+
+  apparatus-cobot:
+    image: sentinel-matrix/apparatus-runtime:latest
+    container_name: matrix-apparatus-cobot
+    restart: unless-stopped
+    depends_on: { nexus: { condition: service_healthy } }
+    networks: { motion-bus-net: { ipv4_address: "10.240.70.131" } }
+    ports: ["18099:8090"]
+    volumes:
+      - ./pcaps:/app/pcaps:ro
+      - ../../apparatus_plugins:/app/apparatus_plugins:ro
+    command: ["--type", "cobot_ethercat_scope", "--name", "Cobot-EtherCAT-Scope", "--target-ip", "10.240.70.101", "--target-port", "502", "--api-port", "8090"]
+
+  apparatus-canfd:
+    image: sentinel-matrix/apparatus-runtime:latest
+    container_name: matrix-apparatus-canfd
+    restart: unless-stopped
+    depends_on: { nexus: { condition: service_healthy } }
+    networks: { motion-bus-net: { ipv4_address: "10.240.70.132" } }
+    ports: ["18100:8090"]
+    volumes:
+      - ./pcaps:/app/pcaps:ro
+      - ../../apparatus_plugins:/app/apparatus_plugins:ro
+    command: ["--type", "mining_canfd_bus", "--name", "Mining-CANFD-Bus", "--target-ip", "10.240.70.102", "--target-port", "502", "--api-port", "8090"]
+
+  apparatus-amr:
+    image: sentinel-matrix/apparatus-runtime:latest
+    container_name: matrix-apparatus-amr
+    restart: unless-stopped
+    depends_on: { nexus: { condition: service_healthy } }
+    networks: { motion-bus-net: { ipv4_address: "10.240.70.133" } }
+    ports: ["18101:8090"]
+    volumes:
+      - ./pcaps:/app/pcaps:ro
+      - ../../apparatus_plugins:/app/apparatus_plugins:ro
+    command: ["--type", "amr_shm_lidar", "--name", "AMR-ShmRing-Radar", "--target-ip", "10.240.70.103", "--target-port", "502", "--api-port", "8090"]

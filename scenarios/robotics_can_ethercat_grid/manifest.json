@@ -1,0 +1,10 @@
+{
+  "name": "robotics_can_ethercat_grid",
+  "slug": "robotics_can_ethercat_grid",
+  "title": "Robotics EtherCAT (0x88A4), Mining CAN-FD & AMR ShmRing 3-Bus Grid",
+  "version": "1.0.0",
+  "asset_type": "scenario",
+  "target_sector": "ROBOTICS_AUTOMATION",
+  "category": "MOTION_CONTROL",
+  "description": "Demonstrates all 3 Non-IP buses simultaneously in Docker Compose: AF_PACKET EtherCAT 0x88A4, AF_UNIX CAN-FD bridge, and ipc:shareable POSIX /dev/shm ring."
+}

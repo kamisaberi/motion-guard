@@ -1,0 +1,22 @@
+node:
+  identifier: "Edge-Cobot-EtherCAT-01"
+  site_identifier: "Edge-Cobot-EtherCAT-01"
+  hardware: { type: "DEVICE_VIRTUAL_TPM", primary_backend: "INTEL_OPENVINO", xdp_driver_mode: "SKB" }
+nexus: { enabled: true, host: "10.240.70.10", port: 50051, nexus_http_port: 9443, active_model_name: "vibration_spectral_ae.onnx", local_models_dir: "/etc/sentinel/models" }
+routes:
+  - sensor_id: Cobot-EtherCAT-Arm-01
+    sensor_type: ETHERCAT_L2_SERVO
+    driver_mode: AF_PACKET_RAW
+    match:
+      port: 0
+      transport: l2_raw
+      package_id: org.aryorithm.package.ethercat_cbf_guard
+      plugin_id: motion_guard_dissector_plugin.so
+      owner_subsystem: 18_cps_sec
+      execution_mode: CASCADE_SHORT_CIRCUIT
+      model_id: vibration_spectral_ae.onnx
+      silicon_target: INTEL_OPENVINO
+      format: ONNX
+      precision: INT8
+      latency_budget_ns: 10000
+      threshold_drop: 0.85

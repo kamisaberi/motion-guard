@@ -1,0 +1,62 @@
+{
+    "attacks": {
+        "motion-ethercat-surge": {
+            "id": "ETHERCAT_SURGE",
+            "name": "EtherCAT 0x88A4 Cobot Joint Surge",
+            "multiplexer_fault": {
+                "action": "step_increase",
+                "value": 45.0
+            },
+            "signal_profile": "impulse_shock"
+        },
+        "motion-canfd-override": {
+            "id": "CANFD_STEER",
+            "name": "CAN-FD Haul Truck Steering Override",
+            "multiplexer_fault": {
+                "action": "step_increase",
+                "value": 60.0
+            },
+            "signal_profile": "discrete_event"
+        },
+        "motion-shm-obstacle": {
+            "id": "SHM_COLLISION",
+            "name": "AMR ShmRing Collision & Brake Overheat",
+            "multiplexer_fault": {
+                "action": "drop_to_val",
+                "value": 0.15
+            },
+            "signal_profile": "flatline_freeze"
+        },
+        "motion-cbf-clamp": {
+            "id": "NAGUMO_CBF_TRIP",
+            "name": "Nagumo CBF Forward Invariance Clamp",
+            "multiplexer_fault": {
+                "action": "harmonic_multiplier",
+                "value": 2.6
+            },
+            "signal_profile": "harmonic_sideband"
+        }
+    },
+    "categories": {
+        "kinematic": {
+            "plot_archetype": "spatial_kinematic",
+            "lab_module": "motion-cbf-clamp",
+            "physics_engine": "generic_ode",
+            "chart_config": {
+                "primary_title": "Joint Velocity vs CBF Bound",
+                "secondary_title": "Nagumo Margin h(x)",
+                "unit": "m/s",
+                "min_val": 0.0,
+                "max_val": 6.0,
+                "safe_low": 0.0,
+                "safe_high": 2.5
+            },
+            "attacks": [
+                "motion-ethercat-surge",
+                "motion-canfd-override",
+                "motion-shm-obstacle",
+                "motion-cbf-clamp"
+            ]
+        }
+    }
+}

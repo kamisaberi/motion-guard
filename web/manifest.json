@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    {
+      "id": "motion",
+      "script": "motion/motion.js",
+      "style": "motion/motion.css"
+    }
+  ]
+}
