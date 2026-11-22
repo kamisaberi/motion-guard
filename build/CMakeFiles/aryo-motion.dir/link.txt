@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/aryo-motion.dir/link.d "CMakeFiles/aryo-motion.dir/tools/aryo_motion/main.cpp.o" -o aryo-motion  -Wl,-rpath,/home/kami/motion-guard/build:/usr/local/lib: libmotion_guard.so -Wl,--no-as-needed /usr/local/lib/libblackbox.so /usr/local/lib/libxinfer.so -Wl,--as-needed

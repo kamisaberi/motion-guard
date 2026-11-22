@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/test_motion_cbf.dir/link.d CMakeFiles/test_motion_cbf.dir/tests/test_motion_cbf.cpp.o -o test_motion_cbf  -Wl,-rpath,/home/kami/motion-guard/build:/usr/local/lib libmotion_guard.so -Wl,--no-as-needed /usr/local/lib/libblackbox.so /usr/local/lib/libxinfer.so -Wl,--as-needed
