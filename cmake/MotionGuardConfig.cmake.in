@@ -1,0 +1,5 @@
+# File: /home/kami/motion-guard/cmake/MotionGuardConfig.cmake.in
+
+@PACKAGE_INIT@
+include("${CMAKE_CURRENT_LIST_DIR}/MotionGuardTargets.cmake")
+check_required_components(MotionGuard)

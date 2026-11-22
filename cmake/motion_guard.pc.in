@@ -1,0 +1,12 @@
+# File: /home/kami/motion-guard/cmake/motion_guard.pc.in
+
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${prefix}/@CMAKE_INSTALL_LIBDIR@
+includedir=${prefix}/@CMAKE_INSTALL_INCLUDEDIR@
+
+Name: motion_guard
+Description: Sub-120 ns EtherCAT, CAN-FD, ShmRing & Nagumo CBF Motion Safety Governor
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lmotion_guard
+Cflags: -I${includedir}
