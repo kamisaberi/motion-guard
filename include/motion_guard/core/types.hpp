@@ -17,8 +17,11 @@ enum class GuardStatus : uint8_t {
     REJECT_SHM_OBSTACLE_COLLISION,
     REJECT_SHM_BRAKE_OVERHEAT,
     REJECT_CBF_BOUNDARY_BREACH,
+    REJECT_TSN_JITTER_BREACH,
+    REJECT_SURGICAL_KOZ_BREACH,
     MOTION_AIRGAP_TRIPPED
 };
+
 
 [[nodiscard]] constexpr std::string_view status_to_string(GuardStatus st) noexcept {
     switch (st) {
