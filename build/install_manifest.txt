@@ -17,5 +17,5 @@
 /usr/local/lib/cmake/MotionGuard/MotionGuardConfig.cmake
 /usr/local/lib/cmake/MotionGuard/MotionGuardConfigVersion.cmake
 /usr/local/lib/cmake/MotionGuard/MotionGuardTargets.cmake
-/usr/local/lib/cmake/MotionGuard/MotionGuardTargets-release.cmake
+/usr/local/lib/cmake/MotionGuard/MotionGuardTargets-noconfig.cmake
 /usr/local/lib/pkgconfig/motion_guard.pc

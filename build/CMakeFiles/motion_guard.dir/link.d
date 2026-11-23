@@ -5,10 +5,10 @@ libmotion_guard.so: \
   CMakeFiles/motion_guard.dir/src/protocols/ethercat_l2.cpp.o \
   CMakeFiles/motion_guard.dir/src/protocols/canfd_bus.cpp.o \
   CMakeFiles/motion_guard.dir/src/protocols/shm_motion.cpp.o \
+  CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o \
   CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o \
   CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o \
   CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o \
-  CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o \
   /usr/local/lib/libblackbox.so \
   /usr/local/lib/libxinfer.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
@@ -48,13 +48,13 @@ CMakeFiles/motion_guard.dir/src/protocols/canfd_bus.cpp.o:
 
 CMakeFiles/motion_guard.dir/src/protocols/shm_motion.cpp.o:
 
+CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o:
+
 CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o:
 
 CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o:
 
 CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o:
-
-CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o:
 
 /usr/local/lib/libblackbox.so:
 

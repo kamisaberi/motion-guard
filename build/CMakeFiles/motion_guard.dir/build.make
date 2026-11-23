@@ -128,10 +128,24 @@ CMakeFiles/motion_guard.dir/src/protocols/shm_motion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motion_guard.dir/src/protocols/shm_motion.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kami/motion-guard/src/protocols/shm_motion.cpp -o CMakeFiles/motion_guard.dir/src/protocols/shm_motion.cpp.s
 
+CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o: CMakeFiles/motion_guard.dir/flags.make
+CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o: /home/kami/motion-guard/src/protocols/surgical_tsn.cpp
+CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o: CMakeFiles/motion_guard.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o -MF CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o.d -o CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o -c /home/kami/motion-guard/src/protocols/surgical_tsn.cpp
+
+CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kami/motion-guard/src/protocols/surgical_tsn.cpp > CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.i
+
+CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kami/motion-guard/src/protocols/surgical_tsn.cpp -o CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.s
+
 CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o: CMakeFiles/motion_guard.dir/flags.make
 CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o: /home/kami/motion-guard/src/defense/motion_cbf_gate.cpp
 CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o: CMakeFiles/motion_guard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o -MF CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o.d -o CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o -c /home/kami/motion-guard/src/defense/motion_cbf_gate.cpp
 
 CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.i: cmake_force
@@ -145,7 +159,7 @@ CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.s: cmake_force
 CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o: CMakeFiles/motion_guard.dir/flags.make
 CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o: /home/kami/motion-guard/src/defense/motion_airgap.cpp
 CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o: CMakeFiles/motion_guard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o -MF CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o.d -o CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o -c /home/kami/motion-guard/src/defense/motion_airgap.cpp
 
 CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.i: cmake_force
@@ -159,7 +173,7 @@ CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.s: cmake_force
 CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o: CMakeFiles/motion_guard.dir/flags.make
 CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o: /home/kami/motion-guard/src/pipeline/guard_engine.cpp
 CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o: CMakeFiles/motion_guard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o -MF CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o.d -o CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o -c /home/kami/motion-guard/src/pipeline/guard_engine.cpp
 
 CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.i: cmake_force
@@ -170,30 +184,16 @@ CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kami/motion-guard/src/pipeline/guard_engine.cpp -o CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.s
 
-CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o: CMakeFiles/motion_guard.dir/flags.make
-CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o: /home/kami/motion-guard/src/protocols/surgical_tsn.cpp
-CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o: CMakeFiles/motion_guard.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o -MF CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o.d -o CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o -c /home/kami/motion-guard/src/protocols/surgical_tsn.cpp
-
-CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kami/motion-guard/src/protocols/surgical_tsn.cpp > CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.i
-
-CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kami/motion-guard/src/protocols/surgical_tsn.cpp -o CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.s
-
 # Object files for target motion_guard
 motion_guard_OBJECTS = \
 "CMakeFiles/motion_guard.dir/src/core/tsc_clock.cpp.o" \
 "CMakeFiles/motion_guard.dir/src/protocols/ethercat_l2.cpp.o" \
 "CMakeFiles/motion_guard.dir/src/protocols/canfd_bus.cpp.o" \
 "CMakeFiles/motion_guard.dir/src/protocols/shm_motion.cpp.o" \
+"CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o" \
 "CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o" \
 "CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o" \
-"CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o" \
-"CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o"
+"CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o"
 
 # External object files for target motion_guard
 motion_guard_EXTERNAL_OBJECTS =
@@ -202,10 +202,10 @@ libmotion_guard.so: CMakeFiles/motion_guard.dir/src/core/tsc_clock.cpp.o
 libmotion_guard.so: CMakeFiles/motion_guard.dir/src/protocols/ethercat_l2.cpp.o
 libmotion_guard.so: CMakeFiles/motion_guard.dir/src/protocols/canfd_bus.cpp.o
 libmotion_guard.so: CMakeFiles/motion_guard.dir/src/protocols/shm_motion.cpp.o
+libmotion_guard.so: CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o
 libmotion_guard.so: CMakeFiles/motion_guard.dir/src/defense/motion_cbf_gate.cpp.o
 libmotion_guard.so: CMakeFiles/motion_guard.dir/src/defense/motion_airgap.cpp.o
 libmotion_guard.so: CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o
-libmotion_guard.so: CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o
 libmotion_guard.so: CMakeFiles/motion_guard.dir/build.make
 libmotion_guard.so: CMakeFiles/motion_guard.dir/compiler_depend.ts
 libmotion_guard.so: /usr/local/lib/libblackbox.so

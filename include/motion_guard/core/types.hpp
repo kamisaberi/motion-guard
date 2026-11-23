@@ -22,7 +22,6 @@ enum class GuardStatus : uint8_t {
     MOTION_AIRGAP_TRIPPED
 };
 
-
 [[nodiscard]] constexpr std::string_view status_to_string(GuardStatus st) noexcept {
     switch (st) {
         case GuardStatus::PASS:                          return "PASS";
@@ -34,10 +33,9 @@ enum class GuardStatus : uint8_t {
         case GuardStatus::REJECT_SHM_OBSTACLE_COLLISION: return "REJECT_SHM_OBSTACLE_COLLISION";
         case GuardStatus::REJECT_SHM_BRAKE_OVERHEAT:     return "REJECT_SHM_BRAKE_OVERHEAT";
         case GuardStatus::REJECT_CBF_BOUNDARY_BREACH:    return "REJECT_CBF_BOUNDARY_BREACH";
-        case GuardStatus::MOTION_AIRGAP_TRIPPED:         return "MOTION_AIRGAP_TRIPPED";
         case GuardStatus::REJECT_TSN_JITTER_BREACH:      return "REJECT_TSN_JITTER_BREACH";
         case GuardStatus::REJECT_SURGICAL_KOZ_BREACH:    return "REJECT_SURGICAL_KOZ_BREACH";
-
+        case GuardStatus::MOTION_AIRGAP_TRIPPED:         return "MOTION_AIRGAP_TRIPPED";
     }
     return "UNKNOWN";
 }
