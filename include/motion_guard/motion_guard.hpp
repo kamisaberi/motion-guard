@@ -10,3 +10,4 @@
 #include "motion_guard/defense/motion_cbf_gate.hpp"
 #include "motion_guard/defense/motion_airgap.hpp"
 #include "motion_guard/pipeline/guard_engine.hpp"
+#include "motion_guard/protocols/surgical_tsn.hpp"
