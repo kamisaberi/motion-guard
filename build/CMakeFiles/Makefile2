@@ -72,6 +72,7 @@ all: CMakeFiles/bench_latency.dir/all
 all: CMakeFiles/test_ethercat_l2.dir/all
 all: CMakeFiles/test_canfd_bus.dir/all
 all: CMakeFiles/test_motion_cbf.dir/all
+all: CMakeFiles/test_surgical_tsn.dir/all
 all: CMakeFiles/test_plugin.dir/all
 all: CMakeFiles/test_motion_tier1_tier2_pipeline.dir/all
 .PHONY : all
@@ -86,6 +87,7 @@ codegen: CMakeFiles/bench_latency.dir/codegen
 codegen: CMakeFiles/test_ethercat_l2.dir/codegen
 codegen: CMakeFiles/test_canfd_bus.dir/codegen
 codegen: CMakeFiles/test_motion_cbf.dir/codegen
+codegen: CMakeFiles/test_surgical_tsn.dir/codegen
 codegen: CMakeFiles/test_plugin.dir/codegen
 codegen: CMakeFiles/test_motion_tier1_tier2_pipeline.dir/codegen
 .PHONY : codegen
@@ -104,6 +106,7 @@ clean: CMakeFiles/bench_latency.dir/clean
 clean: CMakeFiles/test_ethercat_l2.dir/clean
 clean: CMakeFiles/test_canfd_bus.dir/clean
 clean: CMakeFiles/test_motion_cbf.dir/clean
+clean: CMakeFiles/test_surgical_tsn.dir/clean
 clean: CMakeFiles/test_plugin.dir/clean
 clean: CMakeFiles/test_motion_tier1_tier2_pipeline.dir/clean
 .PHONY : clean
@@ -115,12 +118,12 @@ clean: CMakeFiles/test_motion_tier1_tier2_pipeline.dir/clean
 CMakeFiles/motion_guard.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard.dir/build.make CMakeFiles/motion_guard.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard.dir/build.make CMakeFiles/motion_guard.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14 "Built target motion_guard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15 "Built target motion_guard"
 .PHONY : CMakeFiles/motion_guard.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/motion_guard.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/motion_guard.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/motion_guard.dir/rule
@@ -132,7 +135,7 @@ motion_guard: CMakeFiles/motion_guard.dir/rule
 # codegen rule for target.
 CMakeFiles/motion_guard.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard.dir/build.make CMakeFiles/motion_guard.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14 "Finished codegen for target motion_guard"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=7,8,9,10,11,12,13,14,15 "Finished codegen for target motion_guard"
 .PHONY : CMakeFiles/motion_guard.dir/codegen
 
 # clean rule for target.
@@ -147,12 +150,12 @@ CMakeFiles/motion_guard.dir/clean:
 CMakeFiles/motion_guard_static.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard_static.dir/build.make CMakeFiles/motion_guard_static.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard_static.dir/build.make CMakeFiles/motion_guard_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=17,18,19,20,21,22,23,24 "Built target motion_guard_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26 "Built target motion_guard_static"
 .PHONY : CMakeFiles/motion_guard_static.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/motion_guard_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/motion_guard_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/motion_guard_static.dir/rule
@@ -164,7 +167,7 @@ motion_guard_static: CMakeFiles/motion_guard_static.dir/rule
 # codegen rule for target.
 CMakeFiles/motion_guard_static.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard_static.dir/build.make CMakeFiles/motion_guard_static.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=17,18,19,20,21,22,23,24 "Finished codegen for target motion_guard_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=18,19,20,21,22,23,24,25,26 "Finished codegen for target motion_guard_static"
 .PHONY : CMakeFiles/motion_guard_static.dir/codegen
 
 # clean rule for target.
@@ -184,7 +187,7 @@ CMakeFiles/motion-guard-ctl.dir/all: CMakeFiles/motion_guard.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/motion-guard-ctl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/motion-guard-ctl.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/motion-guard-ctl.dir/rule
@@ -216,7 +219,7 @@ CMakeFiles/aryo-motion.dir/all: CMakeFiles/motion_guard.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/aryo-motion.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/aryo-motion.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/aryo-motion.dir/rule
@@ -243,12 +246,12 @@ CMakeFiles/aryo-motion.dir/clean:
 CMakeFiles/motion_guard_dissector_plugin.dir/all: CMakeFiles/motion_guard.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard_dissector_plugin.dir/build.make CMakeFiles/motion_guard_dissector_plugin.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard_dissector_plugin.dir/build.make CMakeFiles/motion_guard_dissector_plugin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=15,16 "Built target motion_guard_dissector_plugin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=16,17 "Built target motion_guard_dissector_plugin"
 .PHONY : CMakeFiles/motion_guard_dissector_plugin.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/motion_guard_dissector_plugin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/motion_guard_dissector_plugin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/motion_guard_dissector_plugin.dir/rule
@@ -260,7 +263,7 @@ motion_guard_dissector_plugin: CMakeFiles/motion_guard_dissector_plugin.dir/rule
 # codegen rule for target.
 CMakeFiles/motion_guard_dissector_plugin.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard_dissector_plugin.dir/build.make CMakeFiles/motion_guard_dissector_plugin.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=15,16 "Finished codegen for target motion_guard_dissector_plugin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=16,17 "Finished codegen for target motion_guard_dissector_plugin"
 .PHONY : CMakeFiles/motion_guard_dissector_plugin.dir/codegen
 
 # clean rule for target.
@@ -280,7 +283,7 @@ CMakeFiles/bench_latency.dir/all: CMakeFiles/motion_guard.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/bench_latency.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/bench_latency.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/bench_latency.dir/rule
@@ -307,12 +310,12 @@ CMakeFiles/bench_latency.dir/clean:
 CMakeFiles/test_ethercat_l2.dir/all: CMakeFiles/motion_guard.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ethercat_l2.dir/build.make CMakeFiles/test_ethercat_l2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ethercat_l2.dir/build.make CMakeFiles/test_ethercat_l2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=27,28 "Built target test_ethercat_l2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=29,30 "Built target test_ethercat_l2"
 .PHONY : CMakeFiles/test_ethercat_l2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_ethercat_l2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_ethercat_l2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_ethercat_l2.dir/rule
@@ -324,7 +327,7 @@ test_ethercat_l2: CMakeFiles/test_ethercat_l2.dir/rule
 # codegen rule for target.
 CMakeFiles/test_ethercat_l2.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ethercat_l2.dir/build.make CMakeFiles/test_ethercat_l2.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=27,28 "Finished codegen for target test_ethercat_l2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=29,30 "Finished codegen for target test_ethercat_l2"
 .PHONY : CMakeFiles/test_ethercat_l2.dir/codegen
 
 # clean rule for target.
@@ -339,12 +342,12 @@ CMakeFiles/test_ethercat_l2.dir/clean:
 CMakeFiles/test_canfd_bus.dir/all: CMakeFiles/motion_guard.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canfd_bus.dir/build.make CMakeFiles/test_canfd_bus.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canfd_bus.dir/build.make CMakeFiles/test_canfd_bus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=25,26 "Built target test_canfd_bus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=27,28 "Built target test_canfd_bus"
 .PHONY : CMakeFiles/test_canfd_bus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_canfd_bus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_canfd_bus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_canfd_bus.dir/rule
@@ -356,7 +359,7 @@ test_canfd_bus: CMakeFiles/test_canfd_bus.dir/rule
 # codegen rule for target.
 CMakeFiles/test_canfd_bus.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_canfd_bus.dir/build.make CMakeFiles/test_canfd_bus.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=25,26 "Finished codegen for target test_canfd_bus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=27,28 "Finished codegen for target test_canfd_bus"
 .PHONY : CMakeFiles/test_canfd_bus.dir/codegen
 
 # clean rule for target.
@@ -371,12 +374,12 @@ CMakeFiles/test_canfd_bus.dir/clean:
 CMakeFiles/test_motion_cbf.dir/all: CMakeFiles/motion_guard.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_motion_cbf.dir/build.make CMakeFiles/test_motion_cbf.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_motion_cbf.dir/build.make CMakeFiles/test_motion_cbf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=29,30 "Built target test_motion_cbf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=31,32 "Built target test_motion_cbf"
 .PHONY : CMakeFiles/test_motion_cbf.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_motion_cbf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_motion_cbf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_motion_cbf.dir/rule
@@ -388,7 +391,7 @@ test_motion_cbf: CMakeFiles/test_motion_cbf.dir/rule
 # codegen rule for target.
 CMakeFiles/test_motion_cbf.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_motion_cbf.dir/build.make CMakeFiles/test_motion_cbf.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=29,30 "Finished codegen for target test_motion_cbf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=31,32 "Finished codegen for target test_motion_cbf"
 .PHONY : CMakeFiles/test_motion_cbf.dir/codegen
 
 # clean rule for target.
@@ -397,18 +400,50 @@ CMakeFiles/test_motion_cbf.dir/clean:
 .PHONY : CMakeFiles/test_motion_cbf.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/test_surgical_tsn.dir
+
+# All Build rule for target.
+CMakeFiles/test_surgical_tsn.dir/all: CMakeFiles/motion_guard.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_surgical_tsn.dir/build.make CMakeFiles/test_surgical_tsn.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_surgical_tsn.dir/build.make CMakeFiles/test_surgical_tsn.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=37,38 "Built target test_surgical_tsn"
+.PHONY : CMakeFiles/test_surgical_tsn.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_surgical_tsn.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 11
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_surgical_tsn.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_surgical_tsn.dir/rule
+
+# Convenience name for target.
+test_surgical_tsn: CMakeFiles/test_surgical_tsn.dir/rule
+.PHONY : test_surgical_tsn
+
+# codegen rule for target.
+CMakeFiles/test_surgical_tsn.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_surgical_tsn.dir/build.make CMakeFiles/test_surgical_tsn.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=37,38 "Finished codegen for target test_surgical_tsn"
+.PHONY : CMakeFiles/test_surgical_tsn.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test_surgical_tsn.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_surgical_tsn.dir/build.make CMakeFiles/test_surgical_tsn.dir/clean
+.PHONY : CMakeFiles/test_surgical_tsn.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_plugin.dir
 
 # All Build rule for target.
 CMakeFiles/test_plugin.dir/all: CMakeFiles/motion_guard.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_plugin.dir/build.make CMakeFiles/test_plugin.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_plugin.dir/build.make CMakeFiles/test_plugin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=33,34 "Built target test_plugin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=35,36 "Built target test_plugin"
 .PHONY : CMakeFiles/test_plugin.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_plugin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_plugin.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_plugin.dir/rule
@@ -420,7 +455,7 @@ test_plugin: CMakeFiles/test_plugin.dir/rule
 # codegen rule for target.
 CMakeFiles/test_plugin.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_plugin.dir/build.make CMakeFiles/test_plugin.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=33,34 "Finished codegen for target test_plugin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=35,36 "Finished codegen for target test_plugin"
 .PHONY : CMakeFiles/test_plugin.dir/codegen
 
 # clean rule for target.
@@ -435,12 +470,12 @@ CMakeFiles/test_plugin.dir/clean:
 CMakeFiles/test_motion_tier1_tier2_pipeline.dir/all: CMakeFiles/motion_guard.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_motion_tier1_tier2_pipeline.dir/build.make CMakeFiles/test_motion_tier1_tier2_pipeline.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_motion_tier1_tier2_pipeline.dir/build.make CMakeFiles/test_motion_tier1_tier2_pipeline.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=31,32 "Built target test_motion_tier1_tier2_pipeline"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=33,34 "Built target test_motion_tier1_tier2_pipeline"
 .PHONY : CMakeFiles/test_motion_tier1_tier2_pipeline.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_motion_tier1_tier2_pipeline.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_motion_tier1_tier2_pipeline.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kami/motion-guard/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_motion_tier1_tier2_pipeline.dir/rule
@@ -452,7 +487,7 @@ test_motion_tier1_tier2_pipeline: CMakeFiles/test_motion_tier1_tier2_pipeline.di
 # codegen rule for target.
 CMakeFiles/test_motion_tier1_tier2_pipeline.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_motion_tier1_tier2_pipeline.dir/build.make CMakeFiles/test_motion_tier1_tier2_pipeline.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=31,32 "Finished codegen for target test_motion_tier1_tier2_pipeline"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=33,34 "Finished codegen for target test_motion_tier1_tier2_pipeline"
 .PHONY : CMakeFiles/test_motion_tier1_tier2_pipeline.dir/codegen
 
 # clean rule for target.

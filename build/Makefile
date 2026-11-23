@@ -289,6 +289,19 @@ test_motion_cbf/fast:
 .PHONY : test_motion_cbf/fast
 
 #=============================================================================
+# Target rules for targets named test_surgical_tsn
+
+# Build rule for target.
+test_surgical_tsn: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_surgical_tsn
+.PHONY : test_surgical_tsn
+
+# fast build rule for target.
+test_surgical_tsn/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_surgical_tsn.dir/build.make CMakeFiles/test_surgical_tsn.dir/build
+.PHONY : test_surgical_tsn/fast
+
+#=============================================================================
 # Target rules for targets named test_plugin
 
 # Build rule for target.
@@ -527,6 +540,33 @@ src/protocols/shm_motion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard_static.dir/build.make CMakeFiles/motion_guard_static.dir/src/protocols/shm_motion.cpp.s
 .PHONY : src/protocols/shm_motion.cpp.s
 
+src/protocols/surgical_tsn.o: src/protocols/surgical_tsn.cpp.o
+.PHONY : src/protocols/surgical_tsn.o
+
+# target to build an object file
+src/protocols/surgical_tsn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard.dir/build.make CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard_static.dir/build.make CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o
+.PHONY : src/protocols/surgical_tsn.cpp.o
+
+src/protocols/surgical_tsn.i: src/protocols/surgical_tsn.cpp.i
+.PHONY : src/protocols/surgical_tsn.i
+
+# target to preprocess a source file
+src/protocols/surgical_tsn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard.dir/build.make CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard_static.dir/build.make CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.i
+.PHONY : src/protocols/surgical_tsn.cpp.i
+
+src/protocols/surgical_tsn.s: src/protocols/surgical_tsn.cpp.s
+.PHONY : src/protocols/surgical_tsn.s
+
+# target to generate assembly for a file
+src/protocols/surgical_tsn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard.dir/build.make CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_guard_static.dir/build.make CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.s
+.PHONY : src/protocols/surgical_tsn.cpp.s
+
 tests/test_canfd_bus.o: tests/test_canfd_bus.cpp.o
 .PHONY : tests/test_canfd_bus.o
 
@@ -647,6 +687,30 @@ tests/test_sentinel_plugin.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_plugin.dir/build.make CMakeFiles/test_plugin.dir/tests/test_sentinel_plugin.cpp.s
 .PHONY : tests/test_sentinel_plugin.cpp.s
 
+tests/test_surgical_tsn.o: tests/test_surgical_tsn.cpp.o
+.PHONY : tests/test_surgical_tsn.o
+
+# target to build an object file
+tests/test_surgical_tsn.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_surgical_tsn.dir/build.make CMakeFiles/test_surgical_tsn.dir/tests/test_surgical_tsn.cpp.o
+.PHONY : tests/test_surgical_tsn.cpp.o
+
+tests/test_surgical_tsn.i: tests/test_surgical_tsn.cpp.i
+.PHONY : tests/test_surgical_tsn.i
+
+# target to preprocess a source file
+tests/test_surgical_tsn.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_surgical_tsn.dir/build.make CMakeFiles/test_surgical_tsn.dir/tests/test_surgical_tsn.cpp.i
+.PHONY : tests/test_surgical_tsn.cpp.i
+
+tests/test_surgical_tsn.s: tests/test_surgical_tsn.cpp.s
+.PHONY : tests/test_surgical_tsn.s
+
+# target to generate assembly for a file
+tests/test_surgical_tsn.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_surgical_tsn.dir/build.make CMakeFiles/test_surgical_tsn.dir/tests/test_surgical_tsn.cpp.s
+.PHONY : tests/test_surgical_tsn.cpp.s
+
 tools/aryo_motion/main.o: tools/aryo_motion/main.cpp.o
 .PHONY : tools/aryo_motion/main.o
 
@@ -743,6 +807,7 @@ help:
 	@echo "... test_motion_cbf"
 	@echo "... test_motion_tier1_tier2_pipeline"
 	@echo "... test_plugin"
+	@echo "... test_surgical_tsn"
 	@echo "... benchmarks/bench_latency.o"
 	@echo "... benchmarks/bench_latency.i"
 	@echo "... benchmarks/bench_latency.s"
@@ -767,6 +832,9 @@ help:
 	@echo "... src/protocols/shm_motion.o"
 	@echo "... src/protocols/shm_motion.i"
 	@echo "... src/protocols/shm_motion.s"
+	@echo "... src/protocols/surgical_tsn.o"
+	@echo "... src/protocols/surgical_tsn.i"
+	@echo "... src/protocols/surgical_tsn.s"
 	@echo "... tests/test_canfd_bus.o"
 	@echo "... tests/test_canfd_bus.i"
 	@echo "... tests/test_canfd_bus.s"
@@ -782,6 +850,9 @@ help:
 	@echo "... tests/test_sentinel_plugin.o"
 	@echo "... tests/test_sentinel_plugin.i"
 	@echo "... tests/test_sentinel_plugin.s"
+	@echo "... tests/test_surgical_tsn.o"
+	@echo "... tests/test_surgical_tsn.i"
+	@echo "... tests/test_surgical_tsn.s"
 	@echo "... tools/aryo_motion/main.o"
 	@echo "... tools/aryo_motion/main.i"
 	@echo "... tools/aryo_motion/main.s"

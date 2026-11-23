@@ -150,6 +150,7 @@ CMakeFiles/aryo-motion.dir/tools/aryo_motion/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
  /usr/include/c++/15/bits/std_mutex.h \
  /home/kami/motion-guard/include/motion_guard/pipeline/guard_engine.hpp \
+ /home/kami/motion-guard/include/motion_guard/protocols/surgical_tsn.hpp \
  /usr/include/c++/15/cstdlib /usr/include/stdlib.h \
  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \

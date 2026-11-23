@@ -7,6 +7,7 @@
 /home/kami/motion-guard/build/CMakeFiles/test_ethercat_l2.dir
 /home/kami/motion-guard/build/CMakeFiles/test_canfd_bus.dir
 /home/kami/motion-guard/build/CMakeFiles/test_motion_cbf.dir
+/home/kami/motion-guard/build/CMakeFiles/test_surgical_tsn.dir
 /home/kami/motion-guard/build/CMakeFiles/test_plugin.dir
 /home/kami/motion-guard/build/CMakeFiles/test_motion_tier1_tier2_pipeline.dir
 /home/kami/motion-guard/build/CMakeFiles/test.dir

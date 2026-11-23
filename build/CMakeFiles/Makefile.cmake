@@ -72,6 +72,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_ethercat_l2.dir/DependInfo.cmake"
   "CMakeFiles/test_canfd_bus.dir/DependInfo.cmake"
   "CMakeFiles/test_motion_cbf.dir/DependInfo.cmake"
+  "CMakeFiles/test_surgical_tsn.dir/DependInfo.cmake"
   "CMakeFiles/test_plugin.dir/DependInfo.cmake"
   "CMakeFiles/test_motion_tier1_tier2_pipeline.dir/DependInfo.cmake"
   )

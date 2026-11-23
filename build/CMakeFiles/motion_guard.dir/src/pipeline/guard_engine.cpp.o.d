@@ -147,4 +147,5 @@ CMakeFiles/motion_guard.dir/src/pipeline/guard_engine.cpp.o: \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
- /usr/include/c++/15/bits/std_mutex.h
+ /usr/include/c++/15/bits/std_mutex.h \
+ /home/kami/motion-guard/include/motion_guard/protocols/surgical_tsn.hpp

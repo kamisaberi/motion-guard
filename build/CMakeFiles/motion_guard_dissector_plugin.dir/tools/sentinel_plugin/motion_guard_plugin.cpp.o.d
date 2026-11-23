@@ -150,6 +150,7 @@ CMakeFiles/motion_guard_dissector_plugin.dir/tools/sentinel_plugin/motion_guard_
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
  /usr/include/c++/15/bits/std_mutex.h \
  /home/kami/motion-guard/include/motion_guard/pipeline/guard_engine.hpp \
+ /home/kami/motion-guard/include/motion_guard/protocols/surgical_tsn.hpp \
  /usr/include/c++/15/algorithm /usr/include/c++/15/bits/stl_algo.h \
  /usr/include/c++/15/bits/algorithmfwd.h \
  /usr/include/c++/15/bits/stl_heap.h \

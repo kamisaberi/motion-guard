@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/motion_guard_static.dir/src/protocols/ethercat_l2.cpp.o.d"
   "CMakeFiles/motion_guard_static.dir/src/protocols/shm_motion.cpp.o"
   "CMakeFiles/motion_guard_static.dir/src/protocols/shm_motion.cpp.o.d"
+  "CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o"
+  "CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o.d"
   "libmotion_guard.a"
   "libmotion_guard.pdb"
 )

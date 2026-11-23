@@ -1,10 +1,10 @@
-Start testing: Nov 22 18:28 +0330
+Start testing: Nov 23 04:55 +0330
 ----------------------------------------------------------
 1/5 Testing: TestEthercatL2
 1/5 Test: TestEthercatL2
 Command: "/home/kami/motion-guard/build/test_ethercat_l2"
 Directory: /home/kami/motion-guard/build
-"TestEthercatL2" start time: Nov 22 18:28 +0330
+"TestEthercatL2" start time: Nov 23 04:55 +0330
 Output:
 ----------------------------------------------------------
 [TEST] Non-IP L2 EtherCAT (0x88A4) Joint Surge & WKC Validation... PASSED
@@ -12,7 +12,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TestEthercatL2" end time: Nov 22 18:28 +0330
+"TestEthercatL2" end time: Nov 23 04:55 +0330
 "TestEthercatL2" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -20,7 +20,7 @@ Test Passed.
 2/5 Test: TestCanfdBus
 Command: "/home/kami/motion-guard/build/test_canfd_bus"
 Directory: /home/kami/motion-guard/build
-"TestCanfdBus" start time: Nov 22 18:28 +0330
+"TestCanfdBus" start time: Nov 23 04:55 +0330
 Output:
 ----------------------------------------------------------
 [TEST] SocketCAN / CAN-FD Arbitration ID & Actuator Override... PASSED
@@ -28,7 +28,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TestCanfdBus" end time: Nov 22 18:28 +0330
+"TestCanfdBus" end time: Nov 23 04:55 +0330
 "TestCanfdBus" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -36,7 +36,7 @@ Test Passed.
 3/5 Test: TestMotionCbf
 Command: "/home/kami/motion-guard/build/test_motion_cbf"
 Directory: /home/kami/motion-guard/build
-"TestMotionCbf" start time: Nov 22 18:28 +0330
+"TestMotionCbf" start time: Nov 23 04:55 +0330
 Output:
 ----------------------------------------------------------
 [TEST] ShmRing Motion Safety & Nagumo CBF Forward Invariance... PASSED
@@ -44,7 +44,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TestMotionCbf" end time: Nov 22 18:28 +0330
+"TestMotionCbf" end time: Nov 23 04:55 +0330
 "TestMotionCbf" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -52,7 +52,7 @@ Test Passed.
 4/5 Test: TestSentinelPlugin
 Command: "/home/kami/motion-guard/build/test_plugin"
 Directory: /home/kami/motion-guard/build
-"TestSentinelPlugin" start time: Nov 22 18:28 +0330
+"TestSentinelPlugin" start time: Nov 23 04:55 +0330
 Output:
 ----------------------------------------------------------
 [TEST] blackbox-sentinel 3-Bus Motion-Guard Plugin ABI Integration...
@@ -61,7 +61,7 @@ Output:
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"TestSentinelPlugin" end time: Nov 22 18:28 +0330
+"TestSentinelPlugin" end time: Nov 23 04:55 +0330
 "TestSentinelPlugin" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -69,7 +69,7 @@ Test Passed.
 5/5 Test: TestMotionTier1Tier2Pipeline
 Command: "/home/kami/motion-guard/build/test_motion_tier1_tier2_pipeline"
 Directory: /home/kami/motion-guard/build
-"TestMotionTier1Tier2Pipeline" start time: Nov 22 18:28 +0330
+"TestMotionTier1Tier2Pipeline" start time: Nov 23 04:55 +0330
 Output:
 ----------------------------------------------------------
 ================================================================================
@@ -82,11 +82,11 @@ Output:
   [2.1] Tier-2 Vibration AE      -> Normal: 0.133098 (PASS) | Anomaly: 0.920141 (DROP)
 >>> RESULT: SUCCESS (ALL MOTION-GUARD TIER-1 & TIER-2 INVARIANTS VERIFIED) <<<
 <end of output>
-Test time =   0.14 sec
+Test time =   0.04 sec
 ----------------------------------------------------------
 Test Passed.
-"TestMotionTier1Tier2Pipeline" end time: Nov 22 18:28 +0330
+"TestMotionTier1Tier2Pipeline" end time: Nov 23 04:55 +0330
 "TestMotionTier1Tier2Pipeline" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 22 18:28 +0330
+End testing: Nov 23 04:55 +0330

@@ -4,6 +4,7 @@
 /usr/local/bin/aryo-motion
 /usr/local/lib/motion_guard_dissector_plugin.so
 /usr/local/lib/blackbox/motion_guard_dissector_plugin.so
+/usr/local/include/motion_guard/protocols/surgical_tsn.hpp
 /usr/local/include/motion_guard/protocols/shm_motion.hpp
 /usr/local/include/motion_guard/protocols/ethercat_l2.hpp
 /usr/local/include/motion_guard/protocols/canfd_bus.hpp

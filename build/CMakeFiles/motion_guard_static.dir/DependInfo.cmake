@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/kami/motion-guard/src/protocols/canfd_bus.cpp" "CMakeFiles/motion_guard_static.dir/src/protocols/canfd_bus.cpp.o" "gcc" "CMakeFiles/motion_guard_static.dir/src/protocols/canfd_bus.cpp.o.d"
   "/home/kami/motion-guard/src/protocols/ethercat_l2.cpp" "CMakeFiles/motion_guard_static.dir/src/protocols/ethercat_l2.cpp.o" "gcc" "CMakeFiles/motion_guard_static.dir/src/protocols/ethercat_l2.cpp.o.d"
   "/home/kami/motion-guard/src/protocols/shm_motion.cpp" "CMakeFiles/motion_guard_static.dir/src/protocols/shm_motion.cpp.o" "gcc" "CMakeFiles/motion_guard_static.dir/src/protocols/shm_motion.cpp.o.d"
+  "/home/kami/motion-guard/src/protocols/surgical_tsn.cpp" "CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o" "gcc" "CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/motion_guard.dir/src/protocols/ethercat_l2.cpp.o.d"
   "CMakeFiles/motion_guard.dir/src/protocols/shm_motion.cpp.o"
   "CMakeFiles/motion_guard.dir/src/protocols/shm_motion.cpp.o.d"
+  "CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o"
+  "CMakeFiles/motion_guard.dir/src/protocols/surgical_tsn.cpp.o.d"
   "libmotion_guard.pdb"
   "libmotion_guard.so"
 )

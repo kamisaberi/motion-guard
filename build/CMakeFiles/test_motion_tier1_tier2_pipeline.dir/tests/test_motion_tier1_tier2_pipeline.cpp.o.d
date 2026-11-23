@@ -150,6 +150,7 @@ CMakeFiles/test_motion_tier1_tier2_pipeline.dir/tests/test_motion_tier1_tier2_pi
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
  /usr/include/c++/15/bits/std_mutex.h \
  /home/kami/motion-guard/include/motion_guard/pipeline/guard_engine.hpp \
+ /home/kami/motion-guard/include/motion_guard/protocols/surgical_tsn.hpp \
  /home/kami/blackbox-sentinel/include/sentinel/sdk/abi.hpp \
  /usr/local/include/xinfer/xinfer.hpp \
  /usr/local/include/xinfer/export.hpp \

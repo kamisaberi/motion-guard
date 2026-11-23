@@ -170,6 +170,20 @@ CMakeFiles/motion_guard_static.dir/src/pipeline/guard_engine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motion_guard_static.dir/src/pipeline/guard_engine.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kami/motion-guard/src/pipeline/guard_engine.cpp -o CMakeFiles/motion_guard_static.dir/src/pipeline/guard_engine.cpp.s
 
+CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o: CMakeFiles/motion_guard_static.dir/flags.make
+CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o: /home/kami/motion-guard/src/protocols/surgical_tsn.cpp
+CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o: CMakeFiles/motion_guard_static.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o -MF CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o.d -o CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o -c /home/kami/motion-guard/src/protocols/surgical_tsn.cpp
+
+CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kami/motion-guard/src/protocols/surgical_tsn.cpp > CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.i
+
+CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kami/motion-guard/src/protocols/surgical_tsn.cpp -o CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.s
+
 # Object files for target motion_guard_static
 motion_guard_static_OBJECTS = \
 "CMakeFiles/motion_guard_static.dir/src/core/tsc_clock.cpp.o" \
@@ -178,7 +192,8 @@ motion_guard_static_OBJECTS = \
 "CMakeFiles/motion_guard_static.dir/src/protocols/shm_motion.cpp.o" \
 "CMakeFiles/motion_guard_static.dir/src/defense/motion_cbf_gate.cpp.o" \
 "CMakeFiles/motion_guard_static.dir/src/defense/motion_airgap.cpp.o" \
-"CMakeFiles/motion_guard_static.dir/src/pipeline/guard_engine.cpp.o"
+"CMakeFiles/motion_guard_static.dir/src/pipeline/guard_engine.cpp.o" \
+"CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o"
 
 # External object files for target motion_guard_static
 motion_guard_static_EXTERNAL_OBJECTS =
@@ -190,9 +205,10 @@ libmotion_guard.a: CMakeFiles/motion_guard_static.dir/src/protocols/shm_motion.c
 libmotion_guard.a: CMakeFiles/motion_guard_static.dir/src/defense/motion_cbf_gate.cpp.o
 libmotion_guard.a: CMakeFiles/motion_guard_static.dir/src/defense/motion_airgap.cpp.o
 libmotion_guard.a: CMakeFiles/motion_guard_static.dir/src/pipeline/guard_engine.cpp.o
+libmotion_guard.a: CMakeFiles/motion_guard_static.dir/src/protocols/surgical_tsn.cpp.o
 libmotion_guard.a: CMakeFiles/motion_guard_static.dir/build.make
 libmotion_guard.a: CMakeFiles/motion_guard_static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libmotion_guard.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kami/motion-guard/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libmotion_guard.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/motion_guard_static.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motion_guard_static.dir/link.txt --verbose=$(VERBOSE)
 
