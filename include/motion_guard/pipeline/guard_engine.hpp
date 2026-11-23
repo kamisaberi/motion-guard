@@ -11,31 +11,39 @@
 #include "motion_guard/protocols/surgical_tsn.hpp"
 #include <span>
 
-namespace motion_guard::pipeline {
+namespace motion_guard::pipeline
+{
 
-class GuardEngine {
-public:
-    [[nodiscard]] GuardStatus process_ethercat_l2(
-        std::span<const uint8_t> l2_payload,
-        const protocols::EthercatPolicy& policy = {}) noexcept;
+    class GuardEngine
+    {
+    public:
+        [[nodiscard]] GuardStatus process_ethercat_l2(
+            std::span<const uint8_t> l2_payload,
+            const protocols::EthercatPolicy &policy = {}) noexcept;
 
-    [[nodiscard]] GuardStatus process_canfd(
-        std::span<const uint8_t> can_raw_frame,
-        const protocols::CanFdPolicy& policy = {}) noexcept;
+        [[nodiscard]] GuardStatus process_canfd(
+            std::span<const uint8_t> can_raw_frame,
+            const protocols::CanFdPolicy &policy = {}) noexcept;
 
-    [[nodiscard]] GuardStatus process_shm_motion(
-        std::span<const uint8_t> shm_payload,
-        const protocols::ShmMotionPolicy& policy = {}) noexcept;
+        [[nodiscard]] GuardStatus process_shm_motion(
+            std::span<const uint8_t> shm_payload,
+            const protocols::ShmMotionPolicy &policy = {}) noexcept;
 
-    [[nodiscard]] GuardStatus process_motion_cbf(
-        const MotionState& state,
-        const defense::MotionCbfLimits& limits = {}) noexcept;
+        [[nodiscard]] GuardStatus process_motion_cbf(
+            const MotionState &state,
+            const defense::MotionCbfLimits &limits = {}) noexcept;
 
-    [[nodiscard]] bool is_airgap_tripped() const noexcept { return airgap_.is_tripped(); }
-    void reset_airgap() noexcept { airgap_.reset(); }
+        [[nodiscard]] GuardStatus process_surgical_tsn(
+            std::span<const uint8_t> payload,
+            uint64_t rx_ptp_ns,
+            const protocols::SurgicalTsnPolicy &policy = {}) noexcept;
 
-private:
-    defense::MotionAirGap airgap_;
-};
+        [[nodiscard]] bool is_airgap_tripped() const noexcept { return airgap_.is_tripped(); }
+        void reset_airgap() noexcept { airgap_.reset(); }
+
+    private:
+        defense::MotionAirGap airgap_;
+        protocols::SurgicalTsnValidator surgical_tsn_;
+    };
 
 } // namespace motion_guard::pipeline
