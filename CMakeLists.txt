@@ -48,6 +48,7 @@ set(LIB_SOURCES
     src/defense/motion_cbf_gate.cpp
     src/defense/motion_airgap.cpp
     src/pipeline/guard_engine.cpp
+    src/protocols/surgical_tsn.cpp
 )
 
 add_library(motion_guard SHARED ${LIB_SOURCES})
