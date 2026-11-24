@@ -1,7 +1,7 @@
-TestEthercatL2 2 0.00192777
-TestCanfdBus 2 0.00167314
-TestMotionCbf 2 0.00175399
-TestSurgicalTsn 2 0.0018312
-TestSentinelPlugin 2 0.00198995
-TestMotionTier1Tier2Pipeline 2 0.0203284
+TestEthercatL2 3 0.00123632
+TestCanfdBus 3 0.00133475
+TestMotionCbf 3 0.00138491
+TestSurgicalTsn 3 0.0014366
+TestSentinelPlugin 3 0.00137163
+TestMotionTier1Tier2Pipeline 3 0.0140108
 ---

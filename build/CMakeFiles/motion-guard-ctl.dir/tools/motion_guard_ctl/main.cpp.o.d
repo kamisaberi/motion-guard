@@ -79,6 +79,7 @@ CMakeFiles/motion-guard-ctl.dir/tools/motion_guard_ctl/main.cpp.o: \
  /usr/include/c++/15/cstddef \
  /home/kami/motion-guard/include/motion_guard/protocols/canfd_bus.hpp \
  /home/kami/motion-guard/include/motion_guard/protocols/shm_motion.hpp \
+ /home/kami/motion-guard/include/motion_guard/protocols/surgical_tsn.hpp \
  /home/kami/motion-guard/include/motion_guard/defense/motion_cbf_gate.hpp \
  /home/kami/motion-guard/include/motion_guard/defense/motion_airgap.hpp \
  /usr/include/c++/15/atomic /usr/include/c++/15/bits/atomic_base.h \
@@ -150,7 +151,6 @@ CMakeFiles/motion-guard-ctl.dir/tools/motion_guard_ctl/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
  /usr/include/c++/15/bits/std_mutex.h \
  /home/kami/motion-guard/include/motion_guard/pipeline/guard_engine.hpp \
- /home/kami/motion-guard/include/motion_guard/protocols/surgical_tsn.hpp \
  /usr/include/c++/15/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
