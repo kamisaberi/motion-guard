@@ -30,8 +30,6 @@ Actions:
 )" << std::endl;
 }
 
-
-
 static std::string locate_scenario_engine()
 {
     namespace fs = std::filesystem;
@@ -66,8 +64,6 @@ static std::string resolve_cartridge_scenario(const std::string &cartridge, cons
     return slug;
 }
 
-
-
 int main(int argc, char *argv[])
 {
     if (argc < 2)
@@ -92,17 +88,20 @@ int main(int argc, char *argv[])
 
     if (action == "cobot-up")
     {
-        return std::system("python3 /home/kami/sentinel-matrix/tools/scenario_engine.py load /home/kami/motion-guard/scenarios/robotics_can_ethercat_grid");
+        const std::string cmd = "python3 \"" + locate_scenario_engine() + "\" load \"" +
+                                resolve_cartridge_scenario("motion-guard", "robotics_can_ethercat_grid") + "\"";
+        return std::system(cmd.c_str());
     }
     if (action == "cobot-down")
     {
-        return std::system("python3 /home/kami/sentinel-matrix/tools/scenario_engine.py down --name robotics_can_ethercat_grid");
+        const std::string cmd = "python3 \"" + locate_scenario_engine() + "\" down --name robotics_can_ethercat_grid";
+        return std::system(cmd.c_str());
     }
     if (action == "cobot-status")
     {
-        return std::system("python3 /home/kami/sentinel-matrix/tools/scenario_engine.py status --name robotics_can_ethercat_grid");
+        const std::string cmd = "python3 \"" + locate_scenario_engine() + "\" status --name robotics_can_ethercat_grid";
+        return std::system(cmd.c_str());
     }
-
     motion_guard::core::TscClock::calibrate();
     motion_guard::pipeline::GuardEngine engine;
 
@@ -132,7 +131,8 @@ int main(int argc, char *argv[])
             }
         }
         double total = 0.0;
-        for (double v : lat_ns) total += v;
+        for (double v : lat_ns)
+            total += v;
         std::cout << "[aryo-motion] Mean Latency (100k EtherCAT frames): " << (total / lat_ns.size()) << " ns\n";
         return 0;
     }
