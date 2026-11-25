@@ -29,7 +29,7 @@ include(CMakePackageConfigHelpers)
 
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/include
-    /home/kami/blackbox-sentinel/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/../blackbox-sentinel/include
     /usr/local/include
 )
 
