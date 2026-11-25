@@ -97,6 +97,7 @@ aryo-motion: CMakeFiles/aryo-motion.dir/tools/aryo_motion/main.cpp.o
 aryo-motion: CMakeFiles/aryo-motion.dir/build.make
 aryo-motion: CMakeFiles/aryo-motion.dir/compiler_depend.ts
 aryo-motion: libmotion_guard.so
+aryo-motion: /usr/local/lib/libsentinelfs.so
 aryo-motion: /usr/local/lib/libblackbox.so
 aryo-motion: /usr/local/lib/libxinfer.so
 aryo-motion: CMakeFiles/aryo-motion.dir/link.txt

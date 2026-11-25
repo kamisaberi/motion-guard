@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dmotion_guard_dissector_plugin_EXPORTS
 
-CXX_INCLUDES = -I/home/kami/motion-guard/include -I/home/kami/blackbox-sentinel/include
+CXX_INCLUDES = -I/home/kami/motion-guard/include -I/home/kami/motion-guard/../blackbox-sentinel/include -I/home/kami/blackbox-sentinel/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=c++20 -fPIC -O3 -march=native -Wall -Wextra -Werror=return-type -fno-omit-frame-pointer
 
